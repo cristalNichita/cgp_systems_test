@@ -58,13 +58,15 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        $client = Client::find($id);
+        $client = Client::with('companies')->find($id);
         $companies = Company::get();
 
         $company_ids = [];
 
-        foreach($client->companies as $item) {
-            $company_ids[] = $item->getOriginal('pivot_company_id');
+        if(isset($client->companies)){
+            foreach($client->companies as $item) {
+                $company_ids[] = $item->getOriginal('pivot_company_id');
+            }
         }
 
         return view('pages.clients.edit', compact('client', 'companies', 'company_ids'));

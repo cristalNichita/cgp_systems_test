@@ -41,7 +41,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Select Multiple</label>
-                                    <select multiple="multiple" class="form-control" name="company[]">
+                                    <select multiple="multiple" class="form-control" name="company[]" required>
                                         @foreach($companies as $company)
                                             <option value="{{ $company->id }}">{{ $company->name }}</option>
                                         @endforeach

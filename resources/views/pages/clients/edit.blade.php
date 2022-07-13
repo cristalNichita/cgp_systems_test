@@ -41,7 +41,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Select Multiple</label>
-                                    <select multiple="multiple" class="form-control" name="company[]">
+                                    <select multiple="multiple" class="form-control" name="company[]" required>
                                         @foreach($companies as $company)
                                             <option
                                                 @if(in_array($company->id, $company_ids)) selected @endif
