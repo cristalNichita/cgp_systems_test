@@ -20,6 +20,6 @@
 <ul>
     <li>If you need pagination, add in the end of link - ?page=2</li>
     <li>GET /api/companies - list of companies</li>
-    <li>GET /api/clients - list of clients by company id</li>
-    <li>GET /api/client_companies - list of companies by client id</li>
+    <li>GET /api/clients/{company_id} - list of clients by company id</li>
+    <li>GET /api/client_companies/{client_id} - list of companies by client id</li>
 </ul>
